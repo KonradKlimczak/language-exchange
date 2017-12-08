@@ -1,23 +1,17 @@
 import * as React from 'react';
+import {
+  Route,
+} from 'react-router-dom';
+
+import Home from './Home/Home';
+import LessonCreator from './LessonCreator/LessonCreator';
 
 class Main extends React.Component {
   render() {
     return (
       <div>
-        <header>
-          Language Exchange
-          <nav>
-            Lessons
-            User
-            Create Lesson
-          </nav>
-        </header>
-        <div>
-          Content
-        </div>
-        <footer>
-          Footer
-        </footer>
+        <Route exact={true} path="/" component={Home} />
+        <Route path="/create-lesson" component={LessonCreator} />
       </div>
     );
   }
