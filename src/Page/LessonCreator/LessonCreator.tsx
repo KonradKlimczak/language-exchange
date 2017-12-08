@@ -1,7 +1,13 @@
 import * as React from 'react';
 
-export default () => (
-    <div>
-        <h2>Home</h2>
-    </div>
-);
+class LessonCreator extends React.Component {
+  render() {
+    return (
+      <form>
+        <h2>Create Lesson</h2>
+      </form>
+    );
+  }
+}
+
+export default LessonCreator;
