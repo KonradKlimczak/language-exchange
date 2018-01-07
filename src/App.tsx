@@ -1,9 +1,7 @@
 import * as React from 'react';
-import {
-  BrowserRouter as Router,
-  Link
-} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
+import Header from './Header/Header';
 import Main from './Page/Main';
 
 import './App.css';
@@ -13,13 +11,7 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <header>
-            Language Exchange
-          <nav>
-              <Link to="/">Home</Link>
-              <Link to="/create-lesson">Create Lesson</Link>
-            </nav>
-          </header>
+          <Header />
           <div>
             <Main />
           </div>
