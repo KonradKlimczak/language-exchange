@@ -1,3 +1,94 @@
 .lele--header {
-    background: crimson;
+  height: 42px;
+  background-color: #78C800;
+  border-bottom: 2px solid #71B200;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  align-items: center;
+  display: flex;
+  color: white;
+}
+.lele--header .burger-icon {
+  padding: 0 12px;
+}
+.lele--header .lele-logo {
+  display: none;
+}
+.lele--header h1 {
+  font-weight: initial;
+  font-size: 1.3rem;
+}
+.lele--header .search-input {
+  height: 30px;
+  background-color: #b5544b;
+  border-radius: 2px;
+  padding: 2px 16px;
+  box-shadow: none;
+  color: #fff;
+}
+.lele--header .search-input input::placeholder {
+  color: #fff;
+}
+.lele--header .search-input input {
+  color: #fff;
+  outline: none;
+  height: 30px;
+  border: none;
+  background: none;
+}
+.lele--header .search-input #product-suggestions {
+  position: absolute;
+}
+.lele--header .lele-menu {
+  display: none;
+}
+.lele--header .lele-menu .lele-menu-item {
+  cursor: pointer;
+  display: flex;
+  height: 18px;
+  padding: 8px 16px;
+  margin: 0 2px;
+  transition: 0.1s all;
+  border-radius: 2px;
+}
+.lele--header .lele-menu .lele-menu-item:hover {
+  background-color: #b5544b;
+}
+.lele--header.is-active {
+  height: initial;
+  flex-wrap: wrap;
+}
+.lele--header.is-active .lele-menu {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+}
+.lele--header.is-active .lele-menu .lele-menu-item {
+  height: 30px;
+}
+
+@media (min-width: 1024px) {
+  .lele--header {
+    padding: 0 16rem;
+    height: 60px;
+    justify-content: space-between;
+  }
+  .lele--header .burger-icon {
+    display: none;
+  }
+  .lele--header .lele-logo {
+    display: block;
+    border: 1px solid #890100;
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    left: 144px;
+    width: 100px;
+  }
+  .lele--header h1 {
+    font-size: 2rem;
+  }
+  .lele--header .lele-menu {
+    display: flex;
+  }
 }
