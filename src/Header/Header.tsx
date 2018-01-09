@@ -1,17 +1,26 @@
-import * as React from "react";
-import { Link } from "react-router-dom";
+import * as React from 'react';
+import { Link } from 'react-router-dom';
 
-import "./Header.css";
+import './Header.css';
 
 export default () => (
   <header className="lele--header">
-    <div className="burger-icon">
+    <div className="lele--burger-icon">
       <i className="fa fa-bars" aria-hidden="true" />
     </div>
     <h1>Language Exchange</h1>
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/create-lesson">Create Lesson</Link>
-    </nav>
+    <div className="search-input">
+      <input type="search" placeholder="Znajdź produkt" list="product-suggestions" />
+      <i className="fa fa-search" aria-hidden="true" />
+      <datalist />
+    </div>
+    <ul className="lele--menu">
+      <li className="lele--menu-item">
+        <Link to="/">Home</Link>
+      </li>
+      <li className="lele--menu-item">
+        <Link to="/create-lesson">Create Lesson</Link>
+      </li>
+    </ul>
   </header>
 );
