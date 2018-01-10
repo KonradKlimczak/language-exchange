@@ -1,10 +1,28 @@
 import * as React from 'react';
 
-class LessonCreator extends React.Component {
+interface LessonCreatorProps {}
+interface LessonCreatorState {
+  title: string | null;
+}
+
+class LessonCreator extends React.Component<LessonCreatorProps, LessonCreatorState> {
+  constructor(props: LessonCreatorProps) {
+    super(props);
+    this.state = {
+      title: null
+    };
+  }
+  handleChangeTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
+    this.setState({
+      title: e.target.value
+    });
+  };
   render() {
     return (
       <form>
-        <h2>Create Lesson</h2>
+        <div>
+          Title <input type="text" onChange={this.handleChangeTitle} />
+        </div>
       </form>
     );
   }

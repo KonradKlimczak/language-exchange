@@ -12,12 +12,8 @@ class App extends React.Component {
       <Router>
         <div>
           <Header />
-          <div>
-            <Main />
-          </div>
-          <footer>
-            Footer
-        </footer>
+          <Main />
+          <footer>Footer</footer>
         </div>
       </Router>
     );
