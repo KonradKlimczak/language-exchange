@@ -1,7 +1,37 @@
 import * as React from 'react';
+import * as Utils from '../../utils';
 
-export default () => (
-    <div>
-        <h2>Home</h2>
-    </div>
-);
+import Loader from '../../Components/Loader';
+
+import { LessonSummary } from '../../Data/Lesson/Lesson';
+
+interface HomeProps {}
+interface HomeState {
+  lessons: Utils.RemoteData<Array<LessonSummary>>;
+}
+
+class Home extends React.Component<HomeProps, HomeState> {
+  constructor(props: HomeProps) {
+    super(props);
+    this.state = {
+      lessons: {
+        kind: Utils.RemoteDataKind.NotAsked
+      }
+    };
+  }
+  render() {
+    switch (this.state.lessons.kind) {
+      case Utils.RemoteDataKind.NotAsked:
+      case Utils.RemoteDataKind.Loading:
+        return <Loader />;
+      case Utils.RemoteDataKind.Success:
+        return <div>Loading</div>;
+      case Utils.RemoteDataKind.Failure:
+        return <div>Loading</div>;
+      default:
+        return Utils.assertNever(this.state.lessons);
+    }
+  }
+}
+
+export default Home;

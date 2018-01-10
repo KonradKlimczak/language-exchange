@@ -10,9 +10,8 @@ export default () => (
     </div>
     <h1>Language Exchange</h1>
     <div className="search-input">
-      <input type="search" placeholder="Znajdź produkt" list="product-suggestions" />
+      <input type="search" placeholder="Search..." list="product-suggestions" />
       <i className="fa fa-search" aria-hidden="true" />
-      <datalist />
     </div>
     <ul className="lele--menu">
       <li className="lele--menu-item">

@@ -1,5 +1,26 @@
-export const classNameBuilder = ([...options]: string[]) => {
-    const PREFIX = 'lele';
+export type RemoteData<T> =
+  | {
+      kind: RemoteDataKind.NotAsked;
+    }
+  | {
+      kind: RemoteDataKind.Loading;
+    }
+  | {
+      kind: RemoteDataKind.Success;
+      data: T;
+    }
+  | {
+      kind: RemoteDataKind.Failure;
+      error: Error;
+    };
 
-    return `${PREFIX}--${options.join('-')}`;
+export enum RemoteDataKind {
+  NotAsked,
+  Loading,
+  Success,
+  Failure
+}
+
+export const assertNever = (_: never) => {
+  throw new Error('This should never be reachable');
 };

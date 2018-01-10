@@ -16,24 +16,23 @@
   font-size: 1.3rem;
 }
 .lele--header .search-input {
+  background-color: #ABFB33;
   height: 30px;
   border-radius: 2px;
   padding: 2px 16px;
   box-shadow: none;
-  color: #fff;
+  color: #808080;
 }
 .lele--header .search-input input::placeholder {
-  color: #fff;
+  color: #808080;
+  font: Arial;
 }
 .lele--header .search-input input {
-  color: #fff;
+  color: #808080;
   outline: none;
   height: 30px;
   border: none;
   background: none;
-}
-.lele--header .search-input #product-suggestions {
-  position: absolute;
 }
 .lele--header .lele--menu {
   display: none;
@@ -47,8 +46,12 @@
   transition: 0.1s all;
   border-radius: 2px;
 }
+.lele--menu .lele--menu-item a {
+  color: #fff;
+  text-decoration: none;
+}
 .lele--header .lele--menu .lele--menu-item:hover {
-  background-color: #b5544b;
+  background-color: #71B200;
 }
 .lele--header.is-active {
   height: initial;
@@ -66,14 +69,14 @@
 @media (min-width: 1024px) {
   .lele--header {
     padding: 0 16rem;
-    height: 60px;
+    height: 44px;
     justify-content: space-between;
   }
   .lele--header .lele--burger-icon {
     display: none;
   }
   .lele--header h1 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
   .lele--header .lele--menu {
     display: flex;
