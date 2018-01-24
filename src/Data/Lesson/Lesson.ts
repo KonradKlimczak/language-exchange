@@ -1,6 +1,6 @@
 import * as User from './../User/User';
 
-interface Tag {
+export interface Tag {
   name: string;
 }
 

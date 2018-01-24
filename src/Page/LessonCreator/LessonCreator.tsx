@@ -1,15 +1,18 @@
 import * as React from 'react';
+import * as Lesson from '../../Data/Lesson/Lesson';
 
 interface LessonCreatorProps {}
 interface LessonCreatorState {
   title: string | null;
+  tags: Array<Lesson.Tag>;
 }
 
 class LessonCreator extends React.Component<LessonCreatorProps, LessonCreatorState> {
   constructor(props: LessonCreatorProps) {
     super(props);
     this.state = {
-      title: null
+      title: null,
+      tags: []
     };
   }
   handleChangeTitle = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,6 +25,13 @@ class LessonCreator extends React.Component<LessonCreatorProps, LessonCreatorSta
       <form>
         <div>
           Title <input type="text" onChange={this.handleChangeTitle} />
+        </div>
+        <div className="tags">
+        {this.state.tags.map(tag => 
+          <div className="tag">
+            {tag.name}
+          </div>
+        )}
         </div>
       </form>
     );
