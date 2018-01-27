@@ -1,6 +1,7 @@
 import * as User from './../User/User';
 
 export interface Tag {
+  id: string;
   name: string;
 }
 

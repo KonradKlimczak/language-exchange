@@ -1,84 +1,81 @@
-.lele--header {
-  height: 42px;
-  background-color: #78C800;
-  border-bottom: 2px solid #71B200;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
-  align-items: center;
-  display: flex;
-  color: white;
+.header {
+    height: 42px;
+    background-color: var(--primary-color);
+    border-bottom: 2px solid #557A2D;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    align-items: stretch;
+    display: flex;
+    color: white;
 }
-.lele--header .lele--burger-icon {
-  padding: 0 12px;
+
+.header .burger-icon {
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
 }
-.lele--header h1 {
-  font-weight: initial;
-  font-size: 1.3rem;
+
+.header h1 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-weight: initial;
+    font-size: 1.3rem;
 }
-.lele--header .search-input {
-  background-color: #ABFB33;
-  height: 30px;
-  border-radius: 2px;
-  padding: 2px 16px;
-  box-shadow: none;
-  color: #808080;
+
+.header .menu {
+    display: none;
+    margin: 0;
 }
-.lele--header .search-input input::placeholder {
-  color: #808080;
-  font: Arial;
+
+.header .menu .menu-item {
+    cursor: pointer;
+    display: flex;
+    height: 100%;
+    padding: 0 16px;
+    margin: 0 2px;
+    transition: 0.1s all;
+    border-radius: 2px;
+    align-items: center;
 }
-.lele--header .search-input input {
-  color: #808080;
-  outline: none;
-  height: 30px;
-  border: none;
-  background: none;
+
+.menu .menu-item a {
+    color: #fff;
+    text-decoration: none;
 }
-.lele--header .lele--menu {
-  display: none;
+
+.header .menu .menu-item:hover {
+    background-color: var(--primary-color-lighter-1);
 }
-.lele--header .lele--menu .lele--menu-item {
-  cursor: pointer;
-  display: flex;
-  height: 18px;
-  padding: 8px 16px;
-  margin: 0 2px;
-  transition: 0.1s all;
-  border-radius: 2px;
+
+.header.is-active {
+    height: initial;
+    flex-wrap: wrap;
 }
-.lele--menu .lele--menu-item a {
-  color: #fff;
-  text-decoration: none;
+
+.header.is-active .menu {
+    display: flex;
+    flex-basis: 100%;
+    flex-direction: column;
 }
-.lele--header .lele--menu .lele--menu-item:hover {
-  background-color: #71B200;
-}
-.lele--header.is-active {
-  height: initial;
-  flex-wrap: wrap;
-}
-.lele--header.is-active .lele--menu {
-  display: flex;
-  flex-basis: 100%;
-  flex-direction: column;
-}
-.lele--header.is-active .lele--menu .lele--menu-item {
-  height: 30px;
+
+.header.is-active .menu .menu-item {
+    height: 30px;
 }
 
 @media (min-width: 1024px) {
-  .lele--header {
-    padding: 0 16rem;
-    height: 44px;
-    justify-content: space-between;
-  }
-  .lele--header .lele--burger-icon {
-    display: none;
-  }
-  .lele--header h1 {
-    font-size: 1.7rem;
-  }
-  .lele--header .lele--menu {
-    display: flex;
-  }
+    .header {
+        padding: 0 16rem;
+        height: 44px;
+        justify-content: space-between;
+    }
+    .header .burger-icon {
+        display: none;
+    }
+    .header h1 {
+        font-size: 1.7rem;
+    }
+    .header .menu {
+        display: flex;
+    }
 }

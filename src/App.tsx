@@ -10,11 +10,11 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div>
+        <React.Fragment>
           <Header />
           <Main />
-          <footer>Footer</footer>
-        </div>
+          <footer style={{ backgroundColor: 'var(--thirdary-color)' }}>Footer</footer>
+        </React.Fragment>
       </Router>
     );
   }

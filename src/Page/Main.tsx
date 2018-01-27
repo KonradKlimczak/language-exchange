@@ -6,7 +6,7 @@ import {
 import Home from './Home/Home';
 import LessonCreator from './LessonCreator/LessonCreator';
 
-import './Main.css'
+import './Main.css';
 
 class Main extends React.Component {
   render() {

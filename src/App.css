@@ -1,0 +1,11 @@
+body {
+  height: 100vh;
+  background: var(--background-color);
+}
+
+div#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
