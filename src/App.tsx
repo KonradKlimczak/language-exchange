@@ -6,19 +6,31 @@ import Main from './Page/Main';
 
 import './App.css';
 
+enum AuthKind {
+  Guest = 'Guest',
+  User = 'User'
+}
+
 interface AppProps {}
 interface AppState {
-  user: {
-    username: string;
-  };
+  app:
+    | {
+        kind: AuthKind.Guest;
+      }
+    | {
+        kind: AuthKind.User;
+        user: {
+          username: string;
+        };
+      };
 }
 
 class App extends React.Component<AppProps, AppState> {
   constructor(props: AppProps) {
     super(props);
     this.state = {
-      user: {
-        username: 'Konrad Klimczak'
+      app: {
+        kind: AuthKind.Guest
       }
     };
   }
