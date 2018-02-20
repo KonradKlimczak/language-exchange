@@ -52,6 +52,7 @@
 .menu .menu-item a {
     color: #fff;
     text-decoration: none;
+    display: flex;
 }
 
 .header .menu .menu-item:hover {

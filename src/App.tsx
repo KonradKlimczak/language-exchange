@@ -6,7 +6,22 @@ import Main from './Page/Main';
 
 import './App.css';
 
-class App extends React.Component {
+interface AppProps {}
+interface AppState {
+  user: {
+    username: string;
+  };
+}
+
+class App extends React.Component<AppProps, AppState> {
+  constructor(props: AppProps) {
+    super(props);
+    this.state = {
+      user: {
+        username: 'Konrad Klimczak'
+      }
+    };
+  }
   render() {
     return (
       <Router>
