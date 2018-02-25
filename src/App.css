@@ -8,3 +8,13 @@ div#root {
   display: flex;
   flex-direction: column;
 }
+
+/* Content helpers */
+
+.bg-light {
+  background: #FDFDFE;
+}
+
+.rounded {
+  border-radius: 3px;
+}
