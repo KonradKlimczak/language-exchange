@@ -43,9 +43,9 @@ export default class GuestView extends React.Component<GuestViewProps, GuestView
         <div className="bg-light rounded">
           <form>
             <TextField label="Username" value={''} onChange={() => console.info('test')} />
-            <input />
-            <input />
-            <input />
+            <TextField label="Username" value={''} onChange={() => console.info('test')} />
+            <TextField label="Username" value={''} onChange={() => console.info('test')} />
+            <TextField label="Username" value={''} onChange={() => console.info('test')} />
           </form>
         </div>
       </div>

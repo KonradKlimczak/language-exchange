@@ -1,34 +1,21 @@
 .text-input {
   background-color: #EBF2FA;
-  border-color: #B8F3FF;
+  border: 1px solid #B8F3FF; 
   border-radius: 5px;
-  border-style: solid;
-  border-width: 1px;
   box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 0px 3.2px;
   box-sizing: border-box;
   color: rgb(36, 41, 46);
   cursor: text;
   display: block;
   font-size: 16px;
-  font-stretch: 100%;
   font-weight: 400;
   height: 46px;
   line-height: 20px;
   margin: 0px;
   max-width: 100%;
   min-height: 46px;
-  outline-color: rgb(36, 41, 46);
-  outline-offset: 0px;
-  outline-style: none;
-  outline-width: 0px;
   padding: 10px;
-  text-align: start;
-  text-indent: 0px;
-  text-transform: none;
-  width: 332.328px;
-  word-spacing: 0px;
-  word-wrap: break-word;
-  writing-mode: horizontal-tb;
+  width: 332px;
 }
 
 .text-input:focus {
