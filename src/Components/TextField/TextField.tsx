@@ -8,6 +8,7 @@ interface TextFieldProps {
   placeholder?: string;
   label?: string;
   errorMessage?: string;
+  password?: boolean;
 }
 
 export const TextField: React.SFC<TextFieldProps> = (props: TextFieldProps) => {
@@ -16,7 +17,7 @@ export const TextField: React.SFC<TextFieldProps> = (props: TextFieldProps) => {
       {props.label && <p>{props.label}</p>}
       <input
         className="text-input"
-        type="text"
+        type={props.password ? 'password' : 'text'}
         value={props.value}
         placeholder={props.placeholder}
         onChange={props.onChange}
