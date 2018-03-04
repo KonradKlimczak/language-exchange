@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { TextField } from '../../Components/TextField/TextField';
 
-interface GuestViewProps { }
+interface GuestViewProps {}
 interface GuestViewState {
   username: string;
   email: string;
@@ -16,7 +16,7 @@ export default class GuestView extends React.Component<GuestViewProps, GuestView
       username: '',
       email: '',
       password: '',
-      passwordAgain: '',
+      passwordAgain: ''
     };
   }
   render() {
